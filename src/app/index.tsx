@@ -4,8 +4,13 @@ import './index.css';
 import PostsList from "../pages/posts-list";
 import PostFullInfo from '../pages/post-full-info';
 import Navbar from '../features-widgets/navbar';
+import { useFetchPostsDataQuery } from '../shared/api';
 
 function App() {
+
+    const { data, error, isLoading } = useFetchPostsDataQuery('bulbasaur');
+    console.log(data);
+
     return (
         <>
             <Navbar/>
