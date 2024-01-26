@@ -1,5 +1,7 @@
-const PostFullInfo = () => {
+import React from "react";
+
+const PostFullInfoPage = () => {
     return <div>Полная информация о посте</div>
 }
 
-export default PostFullInfo
+export default PostFullInfoPage

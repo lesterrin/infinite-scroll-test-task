@@ -1,22 +1,18 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom';
 import './index.css';
-import PostsList from "../pages/posts-list";
-import PostFullInfo from '../pages/post-full-info';
+import PostsListPage from "../pages/posts-list";
+import PostFullInfoPage from '../pages/post-full-info';
 import Navbar from '../features-widgets/navbar';
-import { useFetchPostsDataQuery } from '../shared/api';
+import {useFetchPostsDataQuery} from '../shared/api';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
-
-    const { data, error, isLoading } = useFetchPostsDataQuery('bulbasaur');
-    console.log(data);
-
     return (
         <>
             <Navbar/>
             <Routes>
-                <Route path="/" element={<PostsList/>}/>
-                <Route path="/post-info" element={<PostFullInfo/>}/>
+                <Route path="/" element={<PostsListPage/>}/>
+                <Route path="/post-info" element={<PostFullInfoPage/>}/>
             </Routes>
         </>
     );
