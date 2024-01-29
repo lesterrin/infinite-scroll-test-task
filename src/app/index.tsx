@@ -1,20 +1,19 @@
 import React from 'react';
-import './index.css';
 import PostsListPage from "../pages/posts-list";
 import PostFullInfoPage from '../pages/post-full-info';
-import Navbar from '../features-widgets/navbar';
-import {useFetchPostsDataQuery} from '../shared/api';
 import {Routes, Route} from 'react-router-dom';
+import s from './styles.module.css';
 
 function App() {
     return (
-        <>
-            <Navbar/>
+        <div className={s.container}>
             <Routes>
                 <Route path="/" element={<PostsListPage/>}/>
-                <Route path="/post-info" element={<PostFullInfoPage/>}/>
+                <Route path="/post-info" element={<PostFullInfoPage/>}>
+                    <Route path=":id" element={<PostFullInfoPage/>}/>
+                </Route>
             </Routes>
-        </>
+        </div>
     );
 }
 

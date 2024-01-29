@@ -5,7 +5,7 @@ const PostsListPage = () => {
     return <>
         <h1>Список постов</h1>
         <PostsScrolledList/>
-        </>
+    </>
 }
 
 export default PostsListPage
