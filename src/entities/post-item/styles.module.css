@@ -1,3 +1,10 @@
 .postWrapper {
-    /*white-space: nowrap;*/
+   display: flex;
+    white-space: nowrap; /* Текст не переносится */
 }
+
+.bodyString{
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+

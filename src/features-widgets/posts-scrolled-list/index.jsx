@@ -63,7 +63,7 @@ const PostsScrolledList = () => {
                     </WindowScroller>
                 )}
             </AutoSizer>
-            {isFetching && <span>loading more repositories..</span>}
+            {isFetching && <span>Загрузка...</span>}
         </div>
     )
 }
